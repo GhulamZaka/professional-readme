@@ -1,11 +1,40 @@
 // TODO: Include packages needed for this application
-const inquirer = require("inquirer");
 const fs = require("fs");
-//const generatePage = require("./utils/generateMarkdown.js");
+const util = require("util");
+const inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown.js");
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
 
-const start = () => {
+// const start = () => {
+//   console.log(`
+//       =================
+//       Welcome to the Professional README Generator!
+//       =================
+//       `);
+//   return inquirer.prompt([
+//     {
+//       // prompt for the starting of the README Generator
+//       type: "confirm",
+//       name: "startGenerator",
+//       message: "Do you want to start the application? Press Y to start",
+//       default: false,
+//       validate: (startGeneratorConfirm) => {
+//         if (startGeneratorConfirm) {
+//           return true;
+//         } else {
+//           console.log(
+//             "For starting application you need to press ENTER or type Y!"
+//           );
+//           return false;
+//         }
+//       },
+//     },
+//   ]);
+// };
+
+const questions = () => {
   console.log(`
       =================
       Welcome to the Professional README Generator!
@@ -17,7 +46,7 @@ const start = () => {
       type: "confirm",
       name: "startGenerator",
       message: "Do you want to start the application? Press Y to start",
-      default: false,
+      //default: false,
       validate: (startGeneratorConfirm) => {
         if (startGeneratorConfirm) {
           return true;
@@ -29,11 +58,7 @@ const start = () => {
         }
       },
     },
-  ]);
-};
 
-const questions = () => {
-  return inquirer.prompt([
     {
       // project title prompt
       type: "input",
@@ -54,6 +79,14 @@ const questions = () => {
       type: "input",
       name: "github",
       message: "What is your GitHub Username?",
+      validate: (githubInput) => {
+        if (githubInput) {
+          return true;
+        } else {
+          console.log("Please enter your GitHub username!");
+          return false;
+        }
+      },
     },
     {
       // Email prompt
@@ -77,62 +110,61 @@ const questions = () => {
     },
 
     {
-      // installation instruction prompt
-      type: "confirm",
-      name: "installation",
-      message: "Do you want to add installation instruction?",
-    },
-
-    {
       // inserting installation instructions
       type: "input",
-      name: "installInstructions",
+      name: "install",
       message: `Please add your installation instructions`,
-      when: function (answers) {
-        return answers.install;
-      },
-    },
-    {
-      // Usage information prompt
-      type: "confirm",
-      name: "usage",
-      message: `Do you want to provide the user usage information?`,
     },
 
     {
       // adding usage information
       type: "input",
       name: "usageInfo",
-      message: `Please add your usage information`,
-      when: function (answers) {
-        return answers.usage;
-      },
+      message: `Please enter usage information`,
     },
 
     {
-      // contributing to the repo prompt
-      type: "confirm",
-      name: "contrib",
-      message: `Do you want to add any notes on contributing to the repo?`,
-    },
-    {
       // adding contributors
       type: "input",
-      name: "contribNotes",
-      message: `Please list the contributions here.`,
-      when: function (answers) {
-        return answers.contrib;
-      },
+      name: "contribute",
+      message: `Please list all the contributions here.`,
+    },
+
+    {
+      // adding test instructions
+      type: "input",
+      name: "test",
+      message: `Please add your instructions for running tests`,
+    },
+
+    {
+      // adding license selection prompt
+      type: "rawlist",
+      name: "license",
+      message: "Which open source license would you like to use? ",
+      choices: [
+        "Apache 2.0",
+        "BSD 2-Clause",
+        "GNU AGPLv3.0",
+        "MIT",
+        "Mozilla Public 2.0",
+      ],
     },
   ]);
 };
 
-// TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
-
 // TODO: Create a function to initialize app
-//function init() {}
+async function init() {
+  try {
+    const data = await questions();
+    const generateContent = generateMarkdown(data);
+
+    await writeFileAsync(`./output/README.md`, generateContent);
+    console.log("Successfully created README.md ✔️");
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 // Function call to initialize app
-//init()
-start().then(questions);
+init();
