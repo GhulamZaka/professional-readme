@@ -6,34 +6,6 @@ const generateMarkdown = require("./utils/generateMarkdown.js");
 const writeFileAsync = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
-
-// const start = () => {
-//   console.log(`
-//       =================
-//       Welcome to the Professional README Generator!
-//       =================
-//       `);
-//   return inquirer.prompt([
-//     {
-//       // prompt for the starting of the README Generator
-//       type: "confirm",
-//       name: "startGenerator",
-//       message: "Do you want to start the application? Press Y to start",
-//       default: false,
-//       validate: (startGeneratorConfirm) => {
-//         if (startGeneratorConfirm) {
-//           return true;
-//         } else {
-//           console.log(
-//             "For starting application you need to press ENTER or type Y!"
-//           );
-//           return false;
-//         }
-//       },
-//     },
-//   ]);
-// };
-
 const questions = () => {
   console.log(`
       =================
@@ -47,16 +19,16 @@ const questions = () => {
       name: "startGenerator",
       message: "Do you want to start the application? Press Y to start",
       default: false,
-      // validate: (startGeneratorConfirm) => {
-      //   if (startGeneratorConfirm) {
-      //     return true;
-      //   } else {
-      //     console.log(
-      //       "For starting application you need to press ENTER or type Y!"
-      //     );
-      //     return false;
-      //   }
-      // },
+      validate: (startGeneratorConfirm) => {
+        if (startGeneratorConfirm) {
+          return true;
+        } else {
+          console.log(
+            "For starting application you need to press ENTER or type Y!"
+          );
+          return false;
+        }
+      },
     },
 
     {
