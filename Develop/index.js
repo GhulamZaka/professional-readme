@@ -46,17 +46,17 @@ const questions = () => {
       type: "confirm",
       name: "startGenerator",
       message: "Do you want to start the application? Press Y to start",
-      //default: false,
-      validate: (startGeneratorConfirm) => {
-        if (startGeneratorConfirm) {
-          return true;
-        } else {
-          console.log(
-            "For starting application you need to press ENTER or type Y!"
-          );
-          return false;
-        }
-      },
+      default: false,
+      // validate: (startGeneratorConfirm) => {
+      //   if (startGeneratorConfirm) {
+      //     return true;
+      //   } else {
+      //     console.log(
+      //       "For starting application you need to press ENTER or type Y!"
+      //     );
+      //     return false;
+      //   }
+      // },
     },
 
     {
