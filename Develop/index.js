@@ -115,14 +115,13 @@ const questions = () => {
       name: "license",
       message: "Which open source license would you like to use? ",
       choices: [
-        "Apache 2.0",
-        "BSD 2-Clause",
+        "Apache_2.0",
+        "BSD_2-Clause",
         "GNU AGPLv3.0",
         "MIT",
-        "Mozilla Public 2.0",
+        "Mozilla_Public_2.0",
         "",
       ],
-      default: [""],
     },
   ]);
 };

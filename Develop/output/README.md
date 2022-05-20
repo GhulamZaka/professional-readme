@@ -1,9 +1,9 @@
 
-  ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg) <br />
+  ![Github licence](http://img.shields.io/badge/license-Apache_2.0-blue.svg) <br />
   # Professional README Generator  
 
   ## Description
-  It is a cool generator.
+  It is a cool readme generator.
 
   ## Table of Contents 
   - [Description](#description)
@@ -18,11 +18,11 @@
   node index.js 
 
   ## Usage
-  It can be used via local pc terminal.
+  It can be accessed via your local pc terminal. 
 
   ## License
-  ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg) <br />
-  This application is covered by MIT license. 
+  ![Github licence](http://img.shields.io/badge/license-Apache_2.0-blue.svg) <br />
+  This application is covered by Apache_2.0 license. 
 
   ## Contribution
   x
