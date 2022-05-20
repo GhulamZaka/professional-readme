@@ -120,6 +120,7 @@ const questions = () => {
         "GNU AGPLv3.0",
         "MIT",
         "Mozilla Public 2.0",
+        "",
       ],
       default: [""],
     },
