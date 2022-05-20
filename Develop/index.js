@@ -121,6 +121,14 @@ const questions = () => {
         "MIT",
         "Mozilla Public 2.0",
       ],
+      validate: (licenseRawlist) => {
+        if (licenseRawlist === choices) {
+          return true;
+        } else {
+          console.log("");
+          return false;
+        }
+      },
     },
   ]);
 };

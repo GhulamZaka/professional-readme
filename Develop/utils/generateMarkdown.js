@@ -4,7 +4,11 @@
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-//function renderLicenseLink(license) {}
+// function renderLicenseLink(license) {
+// return `
+
+// `
+// }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -13,9 +17,8 @@
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  #
-  ${data.title}
-  ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)<br />
+  ${data.title}<br />
+  [![License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})<br />
   
   ## Description
   ${data.description}

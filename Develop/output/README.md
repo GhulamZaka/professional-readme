@@ -1,10 +1,9 @@
 
-  #
-  Professional README Generator
-  ![badge](https://img.shields.io/badge/license-Mozilla Public 2.0-brightgreen)<br />
+  Professional README Generator<br />
+  [![License](https://img.shields.io/badge/License-Apache 2.0-blue.svg)](https://opensource.org/licenses/Apache 2.0)<br />
   
   ## Description
-  It is a cool application. 
+  It is a cool readme generator. 
 
   ## Table of Contents 
   - [Description](#description)
@@ -19,14 +18,14 @@
   node index.js 
 
   ## Usage
-  You can run it via you local pc terminal.
+  It can used via local pc terminal.
 
   ## License
-  ![badge](https://img.shields.io/badge/license-Mozilla Public 2.0-brightgreen)<br />
-  This application is covered by Mozilla Public 2.0 license. 
+  ![badge](https://img.shields.io/badge/license-Apache 2.0-brightgreen)<br />
+  This application is covered by Apache 2.0 license. 
 
   ## Contribution
-  x
+  None
 
   ## Test
   test
