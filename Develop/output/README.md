@@ -1,9 +1,9 @@
 
-  Professional README Generator<br />
-  [![License](https://img.shields.io/badge/License-Apache 2.0-blue.svg)](https://opensource.org/licenses/Apache 2.0)<br />
-  
+  ![Github licence](http://img.shields.io/badge/license-Apache 2.0-blue.svg) <br />
+  # Professional README Generator 
+
   ## Description
-  It is a cool readme generator. 
+  It is a cool generator.
 
   ## Table of Contents 
   - [Description](#description)
@@ -15,17 +15,17 @@
   - [Questions](#questions)
 
   ## Installation
-  node index.js 
+  node index.js
 
   ## Usage
-  It can used via local pc terminal.
+  You can use access it via you local pc terminal. 
 
   ## License
-  ![badge](https://img.shields.io/badge/license-Apache 2.0-brightgreen)<br />
+  ![Github licence](http://img.shields.io/badge/license-Apache 2.0-blue.svg) <br />
   This application is covered by Apache 2.0 license. 
 
   ## Contribution
-  None
+  x
 
   ## Test
   test

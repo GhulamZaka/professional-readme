@@ -111,7 +111,7 @@ const questions = () => {
 
     {
       // adding license selection prompt
-      type: "rawlist",
+      type: "list",
       name: "license",
       message: "Which open source license would you like to use? ",
       choices: [
@@ -121,14 +121,7 @@ const questions = () => {
         "MIT",
         "Mozilla Public 2.0",
       ],
-      validate: (licenseRawlist) => {
-        if (licenseRawlist === choices) {
-          return true;
-        } else {
-          console.log("");
-          return false;
-        }
-      },
+      default: [""],
     },
   ]);
 };
