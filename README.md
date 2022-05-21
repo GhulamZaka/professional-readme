@@ -14,6 +14,9 @@ https://github.com/GhulamZaka/professional-readme
 
 ## Walkthrough Vedio
 
+https://drive.google.com/file/d/1n4K0ZH8HrN-ctuOJIyLgByMIqLsKT0ut/view?usp=sharing
+
 ## ScreenShot
 
-<img src ="./develop/images/readme.jpg">
+<img src="./develop/images/readme.jpg">
+<img src="./images/readme.jpg">

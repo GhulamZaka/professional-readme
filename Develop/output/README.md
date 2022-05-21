@@ -1,6 +1,6 @@
 
   ![Github licence](http://img.shields.io/badge/license-Apache_2.0-blue.svg) <br />
-  # Professional README Generator  
+  # Professional README Generator 
 
   ## Description
   It is a cool readme generator.
@@ -15,10 +15,10 @@
   - [Questions](#questions)
 
   ## Installation
-  node index.js 
+  node index.js
 
   ## Usage
-  It can be accessed via your local pc terminal. 
+  It can be used via your local pc terminal.
 
   ## License
   ![Github licence](http://img.shields.io/badge/license-Apache_2.0-blue.svg) <br />

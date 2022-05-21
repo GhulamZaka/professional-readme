@@ -19,16 +19,16 @@ const questions = () => {
       name: "startGenerator",
       message: "Do you want to start the application? Press Y to start",
       default: false,
-      validate: (startGeneratorConfirm) => {
-        if (startGeneratorConfirm) {
-          return true;
-        } else {
-          console.log(
-            "For starting application you need to press ENTER or type Y!"
-          );
-          return false;
-        }
-      },
+      // validate: (startGeneratorConfirm) => {
+      //   if (startGeneratorConfirm) {
+      //     return true;
+      //   } else {
+      //     console.log(
+      //       "For starting application you need to press ENTER or type Y!"
+      //     );
+      //     return false;
+      //   }
+      // },
     },
 
     {
@@ -120,7 +120,6 @@ const questions = () => {
         "GNU AGPLv3.0",
         "MIT",
         "Mozilla_Public_2.0",
-        "",
       ],
     },
   ]);
@@ -133,7 +132,7 @@ async function init() {
     const generateContent = generateMarkdown(data);
 
     await writeFileAsync(`./output/README.md`, generateContent);
-    console.log("Successfully created README.md ✔️");
+    console.log("Successfully created README.md ");
   } catch (err) {
     console.log(err);
   }
