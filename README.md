@@ -18,5 +18,4 @@ https://drive.google.com/file/d/1n4K0ZH8HrN-ctuOJIyLgByMIqLsKT0ut/view?usp=shari
 
 ## ScreenShot
 
-<img src="./develop/images/readme.jpg">
 <img src="./images/readme.jpg">
